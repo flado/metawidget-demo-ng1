@@ -1,0 +1,33 @@
+ <div ng-controller="accountsCtrl">
+
+    <button ng-click="createSavingsAccount()">New Savings account</button>
+    <button ng-click="createCreditAccount()">New Credit account</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Account Number</th>
+            <th>Open Date</th>
+            <th>Account Type</th>
+            <th>Account Balance</th>
+            <th>Customer</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr ng-repeat="account in accounts | filter:filter | orderBy:'id'">
+            <td><a href="#/account/{{account.id}}">{{account.id}}</a></td>
+            <td>{{account.created | date}}</td>
+            <td>{{account.type}}</td>
+            <td>{{account.balance}}</td>
+            <td>{{account.customer.title}} {{account.customer.firstname}} {{account.customer.lastname}}</td>
+            <td>
+              <span ng-if="account.closed">CLOSED</span>
+              <span ng-if="!account.closed">ACTIVE</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>

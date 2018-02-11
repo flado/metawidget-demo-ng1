@@ -1,0 +1,12 @@
+{
+  "version": "0.0.0",
+  "name": "metawidget-demo-ng1",
+  "repository": "https://github.com/flado/metawidget-demo-ng1",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  }
+}

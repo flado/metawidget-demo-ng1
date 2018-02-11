@@ -1,0 +1,62 @@
+[{
+  "id": 14565,
+  "type": "credit",
+  "created": "2017-10-10",
+  "balance": 56,
+  "customer": {
+    "id": 13234,
+    "title": "Mr",
+    "firstname": "Florin",
+    "lastname": "Mercieca",
+    "gender": "Male",
+    "dob": "1977-01-01",
+    "address": {
+      "street": "22 Rose street",
+      "city": "Ormiston",
+      "state": "QLD",
+      "postcode": 4160
+    }
+  },
+  "transactions": [
+    {
+      "id": 3434,
+      "otherAccountId": 45454,
+      "amount": 500,
+      "type": "debit",
+      "date": "2017-10-11"
+    }, {
+      "id": 3433434,
+      "otherAccountNumber": 45435454,
+      "amount": 100,
+      "type": "credit",
+      "date": "2017-04-04"
+    }
+  ]
+},
+{
+  "id": 367363,
+  "type": "credit",
+  "created": "2017-03-03",
+  "balance": 10334,
+  "customer": {
+    "id": 2222,
+    "title": "Mrs",
+    "firstname": "Diana",
+    "lastname": "Pascale",
+    "gender": "Female",
+    "dob": "1978-07-10",
+    "address": {
+      "street": "1 West St",
+      "city": "North Sydney",
+      "state": "NSW",
+      "postcode": 2060
+    }
+  },
+  "transactions": [{
+    "id": 3434,
+    "otherAccountId": 344,
+    "amount": 1600,
+    "type": "debit",
+    "date": "2017-05-06"
+  }]
+}]
