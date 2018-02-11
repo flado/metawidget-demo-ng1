@@ -8,10 +8,7 @@ app.factory( 'mwConfig', function( $http ) {
     form: {
       inspector: new metawidget.inspector.CompositeInspector( [ new metawidget.inspector.PropertyTypeInspector(), function( toInspect, type, names ) {
 
-        console.log('form.inspector.toInspect: ', toInspect);
-        console.log('form.inspector.type: ', type);
-        console.log('form.inspector.names: ', names);
-
+        //check if customer.address inpection
         if ( names !== undefined && names.length === 2 && names[0] === 'customer' && names[1] === 'address' ) {
           // address client-side schema
           return {
@@ -35,7 +32,7 @@ app.factory( 'mwConfig', function( $http ) {
             }
           };
         }
-        //customer client-side schema
+        //check is customer inspection -> customer client-side schema
         if (names !== undefined && names.length === 1 && names[0] === 'customer') {
           return {
             properties: {
@@ -75,7 +72,7 @@ app.factory( 'mwConfig', function( $http ) {
       } ] ),
 
       inspectionResultProcessors: [ function( inspectionResult, mw, toInspect, type, names ) {
-        // account - server-side, asynchronous schema
+        // account -> server-side, asynchronous schema
         if ( names === undefined && toInspect !== undefined && toInspect.type !== undefined ) {
           $http.get( '../data/account-schema.json' ).then( function( result ) {
             metawidget.util.combineInspectionResults( inspectionResult, result.data );

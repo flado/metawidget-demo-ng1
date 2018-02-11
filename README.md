@@ -5,7 +5,7 @@
 
 ## How to
 
-+ install dependecies and start web server
++ install dependencies and start web server
 
 ```
 npm start
